@@ -35,18 +35,25 @@ class PageController extends Controller
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:6|confirmed',
         ]);
-
-        return redirect()->route('signup')->withErrors('Invalid information entered.');
+    
+        // Check to see if the user already exists
+        $user = User::where('email', $validatedData['email'])->first();
+        if ($user) {
+            return redirect()->route('signup')->withErrors('A user with that email address already exists.');
+        }
+    
         // Create a new user instance
         $user = new User();
         $user->name = $validatedData['name'];
         $user->email = $validatedData['email'];
         $user->password = bcrypt($validatedData['password']);
         $user->save();
-
+    
+        // Log the user in
         Auth::login($user);
+    
+        // Redirect the user to the home page
         return redirect('/');
-
     }
 
     public function log_in(Request $request)
