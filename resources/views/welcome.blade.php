@@ -117,8 +117,6 @@
 
           </div>
     </div>
-    {{-- <div class="footer">
-            <p>2023-2023 some software crap organization, no rights reserved</p>
-    </div> --}}
+
     </body>
 </html>

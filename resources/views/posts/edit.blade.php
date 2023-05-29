@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Edit Post</title>
-        <meta content="Edit Post">
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    </head>
+<head>
+    <title>Edit Post</title>
+    <meta content="Edit Post">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+</head>
 
-    <body>
-        <header>
-            <!-- Header content -->
-        </header>
+<body>
 
-        <main>
-            <h1>Edit Post</h1>
+<div class="background">
+    <div class="wrapper">
+        <div class="sidebar">
+            <a href="{{ route('welcome') }}">
+                <div class="image-container">
+                    <img src="{{ asset('css/images/Icon.PNG') }}" alt="Website logo">
+                </div>
+            </a>
+            <h2 style="font-family: Consolas, monospace; font-size: 20px;">&nbsp;The Gamer's Grotto</h2>
+            <hr>
+            <p style="font-family: Consolas, monospace; font-size: 12px; color: yellow;">Welcome to the digital grotto, where passion meets pixels! Whether you're itching to share a review, unleash a rant, craft, or guide some noobs, this is the place to let your game rants go wild!</p>
+            <hr>
 
-            <form method="POST" action="{{ route('posts.update', $post) }}">
-                @csrf
-                @method('PUT')
+            <div class="button-container">
 
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" value="{{ $post->title }}" required>
+                <div style="margin-bottom: 20px">
+                <a href="{{ route('profile') }}"><button>View Profile</button></a>
+                </div>
 
-                <label for="content">Content:</label>
-                <textarea id="content" name="content" required>{{ $post->content }}</textarea>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <div style="margin-bottom: 20px">
+                    <button type="submit">Logout</button>
+                    </div>
+                </form>
 
-                <button type="submit">Update Post</button>
-            </form>
-        </main>
+            </div>
 
-        <footer>
-            <!-- Footer content -->
-        </footer>
-    </body>
+            <div class="footer">
+                <p>&copy; 2023 Gamer Blog | No rights reserved</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 style="color: yellowgreen; text-align:center;">&#127918; EDIT POST &#128293;</h1>
+            <hr>
+            <div class = "blog-container">
+                <form method="POST" action="{{ route('posts.update', $post) }}">
+                    @csrf
+                    @method('PUT')
+                    
+                    <label style = "color:black" for="title">Title:</label>
+                    <input type="text" id="title" name="title" value="{{ $post->title }}" required>
+
+                    <div class = "text">
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content" required>{{ $post->content }}</textarea>
+                    </div>
+
+                    <button type="submit">Update Post</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
+
