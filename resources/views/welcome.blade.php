@@ -9,8 +9,16 @@
     <body>
         <header>
             <h1>Welcome to the Website</h1>
-            <a href="{{ route('login') }}"><button>Login</button></a>
-            <a href="{{ route('signup') }}"><button>Signup</button></a>
+            @guest
+                <a href="{{ route('login') }}"><button>Login</button></a>
+                <a href="{{ route('signup') }}"><button>Signup</button></a>
+            @else
+                <p>Welcome, {{ auth()->user()->name }}!</p>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+            @endguest
         </header>
 
         <main>

@@ -17,10 +17,16 @@ use App\Http\Controllers\PageController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/login', 'App\Http\Controllers\PageController@login')->name('login');
 
 Route::get('/signup','App\Http\Controllers\PageController@signup')->name('signup');
+
+Route::post('/register','App\Http\Controllers\PageController@register')->name('register');
+
+Route::post('/login','App\Http\Controllers\PageController@log_in');
+
+Route::post('/logout','App\Http\Controllers\PageController@logout')->name('logout');
 
 
