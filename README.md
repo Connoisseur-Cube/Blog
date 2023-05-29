@@ -1,9 +1,33 @@
-Introduction:
-For my final project, I chose to develop a gamer blog website using the Laravel framework. The website allows users to create accounts, log in, and engage in a variety of actions, including creating, editing, and deleting blog posts. 
-Technologies Used:
-1.	Laravel Framework: Laravel, an open-source PHP framework, was the core technology used for developing the website. 
-2.	MySQL Database: The project utilized the MySQL database to store user information, blog posts, and related data. Laravel's built-in ORM (Object-Relational Mapping) made database management straightforward.
-3.	HTML, CSS: The front-end of the website was built using HTML, CSS. I found custom CSS to be less of a hassle than bootstrap.
-Features Implemented:
-1.	User Authentication: The website incorporated a user authentication system, allowing users to register, log in their profiles. 
-2.	Blog Management: Users could create, edit, and delete blog posts. User Profiles: Each user had a dedicated profile page where they could showcase their published blogs, view their personal information, and update their profile picture or other details.
+# Gamer Blog Website using Laravel
+
+This project is a gamer blog website developed using the Laravel framework. The website provides users with the ability to create accounts, log in, and perform various actions such as creating, editing, and deleting blog posts.
+
+## Technologies Used
+
+- Laravel Framework: Laravel, an open-source PHP framework, served as the core technology for developing the website.
+- MySQL Database: The project utilized the MySQL database to store user information, blog posts, and related data, leveraging Laravel's built-in ORM for efficient database management.
+- HTML, CSS: The front-end of the website was developed using HTML and CSS, with custom CSS being preferred over Bootstrap for styling.
+
+## Features
+
+- User Authentication: The website implements a user authentication system that allows users to register and log in to their profiles.
+- Blog Management: Users can create, edit, and delete blog posts, offering a seamless blogging experience.
+- User Profiles: Each user has a dedicated profile page to showcase their published blogs, view personal information, and update their profile picture or other details.
+
+## Installation and Setup
+
+1. Download the repository, and unzip it in your htdocs folder, in whichever directory xampp is.
+2. Navigate to the project directory, example `cd C:\xampp\htdocs\Blog`
+3. Install dependencies: `composer install`
+4. Configure the database connection in the `.env` file.
+5. Run database migrations: `php artisan migrate`
+6. Start the development server: `php artisan serve`
+
+## Conclusion
+
+I have come to terms with the fact that php is not a bad language. It's different from, say C++ sure. But it is a rather eloquent language once you get used to it. It has one purpose, and laravel enables it to do it so well, even a complete noob can make their own website very quickly.
+
+However C# >>>>>
+
+
+
