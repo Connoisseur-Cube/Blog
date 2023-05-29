@@ -96,13 +96,17 @@
                 <hr>
 
                 <h2>Latest Blog Posts:</h2>
-                
+
                 @if($posts->count() > 0)
                     @foreach($posts as $post)
-                        <h3>{{ $post->title }}</h3>
-                        <p>{{ $post->content }}</p>
-                        <p>Author: {{ $post->user->name }}</p>
-                        <hr>
+                        <div class="blog-container">
+                            <p style="color:yellow">By: {{ $post->user->name }}</p>
+                            <h2 style="color:black">Title: {{ $post->title }}</h2>
+                            
+                            <div class = "text">
+                            <p>{{ $post->content }}</p>
+                            </div>
+                        </div>
                     @endforeach
                 @else
                     <p>No posts</p>

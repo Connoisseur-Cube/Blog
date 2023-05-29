@@ -99,10 +99,6 @@ button:hover {
 }
 
 /* Style the blog content */
-.blog {
-  padding: 20px; /* Adjust the padding as per your design */
-  /* Add additional styles for your blog content */
-}
 
 .sidebar .footer {
   position: absolute;
@@ -113,4 +109,25 @@ button:hover {
   font-size: 10px;
   font-family: Consolas, monospace; 
   color: yellow;
+}
+
+.blog-container {
+  background: linear-gradient(to bottom, grey ,darkgreen);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.text {
+  background: black;
+  color: #f0f0f0;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid green;
+  border-radius: 10px;
+  min-height: 100px;
+  overflow: auto;
 }
