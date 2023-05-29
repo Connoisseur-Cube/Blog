@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('login');
-});
+Route::get('/login', 'App\Http\Controllers\PageController@login')->name('login');
 
-Route::get('/', function () {
-    return view('signup');
-});
+Route::get('/signup','App\Http\Controllers\PageController@signup')->name('signup');
 
 
