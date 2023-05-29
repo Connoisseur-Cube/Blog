@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -16,6 +17,14 @@ class PageController extends Controller
     public function signup()
     {
         return view('signup');
+    }
+
+    public function profile()
+    {
+        $user = auth()->user();
+        $posts = Post::where('user_id', $user->id)->latest()->get();
+
+        return view('profile', compact('user', 'posts'));
     }
 
     public function register(Request $request)
