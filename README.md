@@ -12,7 +12,7 @@ This project is a gamer blog website developed using the Laravel framework. The 
 
 - User Authentication: The website implements a user authentication system that allows users to register and log in to their profiles.
 - Blog Management: Users can create, edit, and delete blog posts, offering a seamless blogging experience.
-- User Profiles: Each user has a dedicated profile page to showcase their published blogs, view personal information, and update their profile picture or other details.
+- User Profiles: Each user has a dedicated profile page to showcase their published blogs, view personal information.
 
 ## Installation and Setup
 
